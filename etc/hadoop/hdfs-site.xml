@@ -3,4 +3,47 @@
         <name>dfs.replication</name>
         <value>1</value>
     </property>
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>10.40.0.2:9868</value>
+        <description>
+        The secondary namenode http server address and port.
+    </description>
+    </property>
+    <property>
+        <name>dfs.namenode.secondary.https-address</name>
+        <value>10.40.0.2:9869</value>
+        <description>
+        The secondary namenode HTTPS server address and port.
+    </description>
+    </property>
+    <property>
+        <name>dfs.datanode.address</name>
+        <value>10.40.0.2:9866</value>
+        <description>
+        The datanode server address and port for data transfer.
+    </description>
+    </property>
+    <property>
+        <name>dfs.datanode.http.address</name>
+        <value>10.40.0.2:9864</value>
+        <description>
+        The datanode http server address and port.
+    </description>
+    </property>
+    <property>
+        <name>dfs.datanode.ipc.address</name>
+        <value>10.40.0.2:9867</value>
+        <description>
+        The datanode ipc server address and port.
+    </description>
+    </property>
+    <property>
+        <name>dfs.namenode.http-address</name>
+        <value>10.40.0.2:9870</value>
+        <description>
+        The address and the base port where the dfs namenode web ui will listen on.
+    </description>
+    </property>
+
 </configuration>
