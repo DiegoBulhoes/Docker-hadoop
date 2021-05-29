@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: master
+    volumes:
+      - ./hadoop-3.2.2:/opt/hadoop
     stdin_open: true
     tty: true
     networks:

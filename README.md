@@ -7,14 +7,14 @@ Container contendo uma a instalação basica do Hadoop.
 Para executar uma aplicação Hadoop deverá ser criado um diretório no qual será gerado uma pasta de saída, a pasta de saída **não pode existir**.
 
 ```shell
-hadoop-3.2.2/bin/hdfs namenode -format
+./hadoop-3.2.2/bin/hdfs namenode -format
 ```
 
 Inicialize os serviços:
 
 ```shell
-hadoop-3.2.2/sbin/start-dfs.sh
-hadoop-3.2.2/sbin/start-yarn.sh
+./hadoop-3.2.2/sbin/start-dfs.sh
+./hadoop-3.2.2/sbin/start-yarn.sh
 ```
 
 Para executar uma aplicação Hadoop deverá ser criado um diretorio no qual será gerado uma pasta de saída, a pasta de saída **não pode existir**.
