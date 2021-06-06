@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  compute01:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: master
+    stdin_open: true
+    tty: true
+    extra_hosts:
+      - "10.40.0.2:10.40.0.2"
+    networks:
+      hadoop:
+        ipv4_address: 10.40.0.2
+
+networks:
+  hadoop:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.40.0.0/24
