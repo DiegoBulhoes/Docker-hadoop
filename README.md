@@ -1,14 +1,12 @@
 # Docker-hadoop
 
+[![Docker](https://github.com/DiegoBulhoes/Docker-hadoop/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/DiegoBulhoes/Docker-hadoop/actions/workflows/docker-publish.yml)
+
 Container contendo uma a instalação basica do Hadoop.
 
 ## Exemplo
 
-Para utilizar a imagem já criada será necessario se autenticar na plataforma Github. Segue os passos necessario:
-
-```text
-https://docs.github.com/pt/packages/working-with-a-github-packages-registry/working-with-the-docker-registry#authenticating-with-a-personal-access-token
-```
+Para utilizar a imagem já criada será necessario se autenticar na plataforma Github. Segue o [link da documentação](https://docs.github.com/pt/packages/working-with-a-github-packages-registry/working-with-the-docker-registry#authenticating-with-a-personal-access-token)
 
 Após a autenticação será necessario construir o container, para facilitar foi criado o arquivo [docker-compose.yml](https://github.com/DiegoBulhoes/Docker-hadoop/blob/main/docker-compose.yml)
 
