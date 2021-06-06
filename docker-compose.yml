@@ -1,9 +1,7 @@
 version: '3.7'
 services:
   compute01:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: docker.pkg.github.com/diegobulhoes/docker-hadoop/hadoop:latest
     container_name: master
     stdin_open: true
     tty: true
