@@ -4,10 +4,15 @@ on:
   push:
     branches:
       - main
-      - developer
     tags:
       - v*
+    paths-ignore:
+      - '**.md'
   pull_request:
+    branches:
+      - 'main'
+    paths-ignore:
+      - '**.md'
 env:
   IMAGE_NAME: hadoop
 
