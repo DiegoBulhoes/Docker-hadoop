@@ -10,10 +10,12 @@ RUN apt update && apt install -y openjdk-8-jdk ssh git curl openssh-server && \
 RUN groupadd --gid 1000 hadoop \
     && useradd --uid 1000 --gid hadoop --shell /bin/bash --create-home hadoop
 RUN echo "hadoop:hadoop" | chpasswd
+USER hadoop
 RUN mkdir -p /home/hadoop/.ssh && ssh-keygen -q  -f /home/hadoop/.ssh/id_rsa -N """"
 RUN cp /home/hadoop/.ssh/id_rsa.pub /home/hadoop/.ssh/authorized_keys
 RUN chown -R hadoop:hadoop /home/hadoop/
 WORKDIR /home/hadoop/
+USER root   
 
 #Download Hadoop
 RUN curl -s https://downloads.apache.org/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz | tar -xz -C /opt && \
