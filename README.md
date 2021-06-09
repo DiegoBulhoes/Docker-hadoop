@@ -32,7 +32,7 @@ Inicialize os serviços
 /opt/hadoop/sbin/start-all.sh
 ```
 
-Para executar uma aplicação wordcount Hadoop deverá ser criado um diretorio no qual será gerado uma pasta de saída, a pasta de saída **não pode existir**.
+Para executar uma aplicação wordcount Hadoop deverá ser criado um diretorio no qual será gerado uma pasta de input:
 
 ```shell
 mkdir input
@@ -48,7 +48,7 @@ Copiar o diretório input para o HDFS
 Execultar o WordCount
 
 ```shell
-/opt/hadoop/bin/hadoop jar /opt/hadoop/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar wordcount /in output
+/opt/hadoop/bin/hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar wordcount /in output
 ```
 
 Coletar a saída do HDFS
