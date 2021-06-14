@@ -6,13 +6,17 @@ services:
       dockerfile: Dockerfile
     container_name: master
     stdin_open: true
+    volumes: 
+      - home_user_hadoop:/home/hadoop
     tty: true
     extra_hosts:
       - "10.40.0.2:10.40.0.2"
     networks:
       hadoop:
         ipv4_address: 10.40.0.2
-
+volumes:
+  home_user_hadoop:
+    
 networks:
   hadoop:
     driver: bridge
