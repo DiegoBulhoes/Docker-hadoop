@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 # Download utils
 RUN mkdir /var/run/sshd
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt update && apt install -y openjdk-8-jdk ssh git curl openssh-server && \
+RUN apt update && apt install -y openjdk-8-jdk ssh git vim python3 curl openssh-server && \
     rm -rf /var/lib/apt/list/*
 
 #Config user Hadoop
@@ -43,7 +43,7 @@ RUN mkdir /opt/hadoop/logs
 COPY ./etc /opt/hadoop/etc/
 
 # Hdfs ports
-EXPOSE 50010 50020 50070 50075 50090 8020 9000
+EXPOSE 50010 50020 50070 50075 50090 8020 9000 36637
 # Mapred ports
 EXPOSE 10020 19888
 #Yarn ports
